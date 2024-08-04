@@ -127,7 +127,7 @@ const DonutChart = () => {
         }}
       >
         <div style={{ position: "relative", width: "100%", height: "100%" }}>
-          <Doughnut data={data} options={options} />
+          <Doughnut data={data} options={options}/>
           <div
             style={{
               position: "absolute",
@@ -155,13 +155,13 @@ const DonutChart = () => {
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(2,1fr)",
-          gap: "25px 120px",
+          gap: "8px 120px",
           textAlign: "end",
         }}
         className='my-4'
       >
         {walletArr.map((item) => (
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col">
             <div
               style={{
                 display: "flex",

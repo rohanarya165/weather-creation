@@ -10,7 +10,7 @@ import ImageThree from "../assets/imageThree.png";
 import ImageFour from "../assets/imageFour.png";
 import ImageFive from "../assets/imageFive.png";
 import TableWeather from "../componants/TableWeather";
-import ChartWeather from "../componants/TableWeather"
+import ChartWeather from "../componants/ChartWeather";
 
 const { Header, Sider, Content } = Layout;
 
