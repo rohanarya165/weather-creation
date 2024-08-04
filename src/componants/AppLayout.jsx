@@ -60,9 +60,9 @@ const AppLayout = () => {
               "linear-gradient(90deg, rgba(255,255,255,1) 28%, rgba(185,181,250,1) 48%, rgba(255,255,255,1) 71%)",
           }}
         >
-          <div class="flex gap-4 w-full pr-4">
+          <div class="flex flex-wrap gap-4 pr-4">
             <div class="grow mt-4 ml-4">
-              <div className="flex gap-4">
+              <div className="flex flex-wrap gap-4">
                 <div className="grow">
                   <ChartWeather />
                 </div>

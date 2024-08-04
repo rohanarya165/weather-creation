@@ -2,10 +2,12 @@ import React from "react";
 import LineChart from "./Linechart";
 function ChartWeather() {
   return (
-    <div className="flex flex-col rounded-lg overflow-hidden border border-[#DBDBDB] w-full bg-white gap-4">
+    <div className="flex flex-col rounded-lg overflow-hidden border border-[#DBDBDB] w-full h-full bg-white gap-4">
       <div className="bg-[#FFFDD2] text-center w-[100%] p-4 font-bold">
         <h3>Assets Net Worth</h3>
       </div>
+      <div className="h-full flex flex-col justify-between">
+
       <div className="pb-16">
         <div className="flex justify-between p-2">
           <div>
@@ -33,8 +35,9 @@ function ChartWeather() {
           <div className="pl-2 text-[12px]">Last Updated:02 hrs ago</div>
         </div>
       </div>
-      <div className="w-full">
+      <div className="w-full pb-8">
         <LineChart />
+      </div>
       </div>
     </div>
   );
