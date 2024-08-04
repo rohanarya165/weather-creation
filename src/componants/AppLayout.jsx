@@ -1,70 +1,80 @@
 import React, { useState } from "react";
 import {
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
   UploadOutlined,
   UserOutlined,
   VideoCameraOutlined,
 } from "@ant-design/icons";
-import { Button, Layout, Menu, theme } from "antd";
+import { Layout, Menu } from "antd";
+import StatusBar from "./StatusBar";
+import Logo from "../assets/Screenshot 2024-08-03 at 10.21.35 PM.png";
+import SideColumn from "./SideColumn";
+import ImageOne from "../assets/imageOne.png"
+import ImageTwo from "../assets/imageTwo.png"
+import ImageThree from "../assets/imageThree.png"
+import ImageFour from "../assets/imageFour.png"
+import ImageFive from "../assets/imageFive.png"
 
 const { Header, Sider, Content } = Layout;
 
 const AppLayout = () => {
-  const {
-    token: { colorBgContainer, borderRadiusLG },
-  } = theme.useToken();
 
   return (
-    <Layout style={{ height: "100vh" }}>
-          <Sider collapsed={ true} style={{ background: "#DFF0FF" }}>
-        <Menu
-                  mode="inline"
-                style =  {{ background: "#DFF0FF" }}
-          defaultSelectedKeys={["1"]}
-          items={[
-            {
-              key: "1",
-              icon: <UserOutlined />,
-              label: "nav 1",
-            },
-            {
-              key: "2",
-              icon: <VideoCameraOutlined />,
-              label: "nav 2",
-            },
-            {
-              key: "3",
-              icon: <UploadOutlined />,
-              label: "nav 3",
-            },
-          ]}
-        />
+    <Layout style={{ minHeight: "100vh" }}>
+      <Sider
+        collapsed={true}
+        style={{ background: "#DFF0FF", padding: "15px" }}
+      >
+        <img src={Logo} className="w-[47px] h-[47px] my-4" />
+
+        <div className="flex flex-col justify-center gap-20 mt-20">
+        
+            <img src={ImageOne} alt="" className="h-[40px] w-[40px]" />
+         
+          
+            <img src={ImageTwo} alt="" className="h-[40px] w-[40px]" />
+
+            <img src={ImageThree} alt="" className="h-[40px] w-[40px]" />
+
+            <img src={ImageFour} alt="" className="min-h-[40px] w-[50px]" />
+
+            <img src={ImageFive} alt="" className="h-[40px] w-[40px]" />
+        </div>
       </Sider>
       <Layout>
-        <Header style={{ padding: 0, background: colorBgContainer }}>
-          <Button
-            type="text"
-            icon={<MenuUnfoldOutlined />}
-            onClick={() => {}}
-            style={{
-              fontSize: "16px",
-              width: 64,
-              height: 64,
-            }}
-          />
-        </Header>
-        <Content
+        <Header
           style={{
-            margin: "24px 16px",
-            padding: 24,
-            minHeight: 280,
-            background: colorBgContainer,
-            borderRadius: borderRadiusLG,
+            background:
+              "linear-gradient(90deg, rgba(255,255,255,1) 28%, rgba(185,181,250,1) 48%, rgba(255,255,255,1) 71%)",
+            height: "90px",
+            padding: "20px",
           }}
         >
-          <div className="text-3xl bg-red-600 font-bold underline">
-            Hello world!
+          <div className="flex justify-between">
+            <div className="text-[30px] mt-4 font-[700]">Overview</div>
+            <div className="flex gap-4">
+              <div className="border rounded-full w-[50px] h-[50px] bg-slate-400"></div>
+              <div className="border rounded-full w-[50px] h-[50px] bg-slate-400"></div>
+              <div className="flex flex-col gap-2">
+                <div className="text-[20px] font-[700]">Welcome back, John</div>
+                <div className="text-[12px] font-[400]">
+                  myemailaddress@example.com
+                </div>
+              </div>
+            </div>
+          </div>
+        </Header>
+        <StatusBar />
+        <Content
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(255,255,255,1) 28%, rgba(185,181,250,1) 48%, rgba(255,255,255,1) 71%)",
+          }}
+        >
+          <div class="flex gap-4 w-full pr-4">
+            <div class="grow mt-4 ml-4">01</div>
+            <div class="grow-0 ">
+              <SideColumn />
+            </div>
           </div>
         </Content>
       </Layout>
